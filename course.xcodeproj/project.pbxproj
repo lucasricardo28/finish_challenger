@@ -7,15 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB2D02BF25FE7675003AA325 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02BE25FE7675003AA325 /* InitialViewController.swift */; };
+		AB2D02C525FE76CD003AA325 /* FinishAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */; };
+		AB2D02C825FE7713003AA325 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */; };
+		AB2D02D225FE77A5003AA325 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02D125FE77A5003AA325 /* InitialViewModel.swift */; };
+		AB2D02D525FE77BA003AA325 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02D425FE77BA003AA325 /* BaseService.swift */; };
+		ABA6C7EC260956F6003B7DF3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C7EB260956F6003B7DF3 /* LoginViewController.swift */; };
+		ABA6C7EF26095763003B7DF3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C7EE26095763003B7DF3 /* ResetPasswordViewController.swift */; };
+		ABA6C7F526095C1D003B7DF3 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C7F426095C1D003B7DF3 /* PrimaryButton.swift */; };
 		ABB5C8E625F6E3B0003EA59B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB5C8E525F6E3B0003EA59B /* AppDelegate.swift */; };
 		ABB5C8E825F6E3B0003EA59B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB5C8E725F6E3B0003EA59B /* SceneDelegate.swift */; };
 		ABB5C8EA25F6E3B0003EA59B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB5C8E925F6E3B0003EA59B /* ViewController.swift */; };
 		ABB5C8ED25F6E3B0003EA59B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB5C8EB25F6E3B0003EA59B /* Main.storyboard */; };
 		ABB5C8EF25F6E3D9003EA59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB5C8EE25F6E3D9003EA59B /* Assets.xcassets */; };
 		ABB5C8F225F6E3D9003EA59B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB5C8F025F6E3D9003EA59B /* LaunchScreen.storyboard */; };
+		ABDAE2A826001720001C16F9 /* InitialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAE2A726001720001C16F9 /* InitialProtocol.swift */; };
+		ABDAE2AC26001D74001C16F9 /* InitialResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAE2AB26001D74001C16F9 /* InitialResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB2D02BE25FE7675003AA325 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishAccountViewController.swift; sourceTree = "<group>"; };
+		AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
+		AB2D02D125FE77A5003AA325 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		AB2D02D425FE77BA003AA325 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		ABA6C7EB260956F6003B7DF3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ABA6C7EE26095763003B7DF3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		ABA6C7F426095C1D003B7DF3 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		ABB5C8E225F6E3B0003EA59B /* course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = course.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB5C8E525F6E3B0003EA59B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB5C8E725F6E3B0003EA59B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +42,8 @@
 		ABB5C8EE25F6E3D9003EA59B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB5C8F125F6E3D9003EA59B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB5C8F325F6E3D9003EA59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABDAE2A726001720001C16F9 /* InitialProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialProtocol.swift; sourceTree = "<group>"; };
+		ABDAE2AB26001D74001C16F9 /* InitialResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2817D225F9787A0017D2D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABDAE2A626001583001C16F9 /* Protocols */,
+				AB2D02BE25FE7675003AA325 /* InitialViewController.swift */,
+				AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */,
+				AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */,
+				ABA6C7EB260956F6003B7DF3 /* LoginViewController.swift */,
+				ABA6C7EE26095763003B7DF3 /* ResetPasswordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB2817D325F978B60017D2D4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D02D125FE77A5003AA325 /* InitialViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AB2817D425F978CC0017D2D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB2817D525F978D60017D2D4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ABDAE2A426001500001C16F9 /* Responses */,
+				AB2D02D425FE77BA003AA325 /* BaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ABA6C7F226095BF2003B7DF3 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				ABA6C7F326095C08003B7DF3 /* Views */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		ABA6C7F326095C08003B7DF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABA6C7F426095C1D003B7DF3 /* PrimaryButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ABB5C8D925F6E3AF003EA59B = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +129,11 @@
 		ABB5C8E425F6E3B0003EA59B /* course */ = {
 			isa = PBXGroup;
 			children = (
+				ABA6C7F226095BF2003B7DF3 /* Commons */,
+				AB2817D525F978D60017D2D4 /* Services */,
+				AB2817D425F978CC0017D2D4 /* Models */,
+				AB2817D325F978B60017D2D4 /* ViewModels */,
+				AB2817D225F9787A0017D2D4 /* Controllers */,
 				ABB5C8E525F6E3B0003EA59B /* AppDelegate.swift */,
 				ABB5C8E725F6E3B0003EA59B /* SceneDelegate.swift */,
 				ABB5C8E925F6E3B0003EA59B /* ViewController.swift */,
@@ -65,6 +143,22 @@
 				ABB5C8F325F6E3D9003EA59B /* Info.plist */,
 			);
 			path = course;
+			sourceTree = "<group>";
+		};
+		ABDAE2A426001500001C16F9 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				ABDAE2AB26001D74001C16F9 /* InitialResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		ABDAE2A626001583001C16F9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ABDAE2A726001720001C16F9 /* InitialProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +231,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDAE2A826001720001C16F9 /* InitialProtocol.swift in Sources */,
 				ABB5C8EA25F6E3B0003EA59B /* ViewController.swift in Sources */,
 				ABB5C8E625F6E3B0003EA59B /* AppDelegate.swift in Sources */,
+				ABA6C7EF26095763003B7DF3 /* ResetPasswordViewController.swift in Sources */,
 				ABB5C8E825F6E3B0003EA59B /* SceneDelegate.swift in Sources */,
+				ABA6C7F526095C1D003B7DF3 /* PrimaryButton.swift in Sources */,
+				AB2D02C825FE7713003AA325 /* NewAccountViewController.swift in Sources */,
+				ABDAE2AC26001D74001C16F9 /* InitialResponse.swift in Sources */,
+				AB2D02D225FE77A5003AA325 /* InitialViewModel.swift in Sources */,
+				AB2D02BF25FE7675003AA325 /* InitialViewController.swift in Sources */,
+				AB2D02D525FE77BA003AA325 /* BaseService.swift in Sources */,
+				AB2D02C525FE76CD003AA325 /* FinishAccountViewController.swift in Sources */,
+				ABA6C7EC260956F6003B7DF3 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
