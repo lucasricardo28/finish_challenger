@@ -18,10 +18,10 @@ class InitialViewModel{
     func requestInitial(_ email:String){
         delegate?.load();
         
-        let urlComponents = baseService?.mountParameters("/ricardo", nil)
-        if let url = urlComponents?.url {
-            let urlRequest = URLRequest(url: url)
-            baseService?.request(route: urlRequest, { ( result:Result<InitialResponse, Error>) in
+//        let urlComponents = baseService?.mountParameters("/ricardo", nil)
+//        if let url = urlComponents?.url {
+//            let urlRequest = URLRequest(url: url)
+        baseService?.request(route: IosiApi.login("email@random.com", "senha"), { ( result:Result<InitialResponse, Error>) in
                 switch(result){
                 case .success(_):
                     self.delegate?.close()
@@ -31,7 +31,7 @@ class InitialViewModel{
                     print("Deu ruim")
                 }
             })
-        }
+//        }
         
     }
 }

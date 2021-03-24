@@ -37,7 +37,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmq-0K-FHp" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="30"/>
-                                        <color key="backgroundColor" name="color_primary"/>
+                                        <color key="backgroundColor" name="IOSIGold"/>
                                         <state key="normal" title="Logar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -52,7 +52,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzQ-5S-Dc3" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
                                         <rect key="frame" x="194" y="0.0" width="184" height="30"/>
-                                        <color key="backgroundColor" name="color_primary"/>
+                                        <color key="backgroundColor" name="IOSIGold"/>
                                         <state key="normal" title="Registrar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,7 +132,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKz-f4-81I" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
                                 <rect key="frame" x="122" y="335" width="170" height="30"/>
-                                <color key="backgroundColor" name="color_primary"/>
+                                <color key="backgroundColor" name="IOSIGold"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="JIg-jL-rSS"/>
                                 </constraints>
@@ -224,7 +224,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1B-A9-pJD" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
                                 <rect key="frame" x="122" y="510.5" width="170" height="30"/>
-                                <color key="backgroundColor" name="color_primary"/>
+                                <color key="backgroundColor" name="IOSIGold"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="kRe-87-lzl"/>
                                 </constraints>
@@ -381,7 +381,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJQ-k0-c5j" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
                                 <rect key="frame" x="119.5" y="630" width="175" height="30"/>
-                                <color key="backgroundColor" name="color_primary"/>
+                                <color key="backgroundColor" name="IOSIGold"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="9Hh-MC-HvY"/>
                                 </constraints>
@@ -479,7 +479,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-0m-YDv" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
                                 <rect key="frame" x="119.5" y="536" width="175" height="30"/>
-                                <color key="backgroundColor" name="color_primary"/>
+                                <color key="backgroundColor" name="IOSIGold"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="izd-o3-oDp"/>
                                 </constraints>
@@ -554,8 +554,8 @@
         <segue reference="UJQ-OZ-e7g"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <namedColor name="color_primary">
-            <color red="0.70588235294117652" green="0.5725490196078431" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="IOSIGold">
+            <color red="0.70599997043609619" green="0.57300001382827759" blue="0.23100000619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
