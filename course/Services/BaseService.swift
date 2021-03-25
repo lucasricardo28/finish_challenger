@@ -21,7 +21,7 @@ enum IosiApi {
         case .verifyEmail:
             return "GET"
         case .login:
-            return "GET"
+            return "POST"
         }
     }
     

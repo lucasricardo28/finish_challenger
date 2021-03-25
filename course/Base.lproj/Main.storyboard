@@ -222,7 +222,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1B-A9-pJD" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1B-A9-pJD">
                                 <rect key="frame" x="107" y="445.5" width="200" height="30"/>
                                 <color key="backgroundColor" name="IOSIGold"/>
                                 <constraints>
@@ -236,6 +236,9 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonLoginAction:" destination="HhA-XA-V6D" eventType="touchUpInside" id="zPJ-3n-pvM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISs-UR-p9X">
                                 <rect key="frame" x="24" y="383.5" width="366" height="30"/>
@@ -290,6 +293,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textFieldEmail" destination="Eob-gy-GiX" id="TWZ-Ld-FlC"/>
+                        <outlet property="textFieldPassword" destination="1ir-1c-HWv" id="eEU-qU-gRE"/>
                         <segue destination="7d7-C1-Kwt" kind="presentation" identifier="sgLoginToHome" modalPresentationStyle="fullScreen" id="Ptp-uD-6Ag"/>
                     </connections>
                 </viewController>
@@ -399,7 +404,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJQ-k0-c5j" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJQ-k0-c5j">
                                 <rect key="frame" x="107" y="480" width="200" height="30"/>
                                 <color key="backgroundColor" name="IOSIGold"/>
                                 <constraints>
@@ -476,69 +481,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vamos criar uma nova conta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwy-wp-fDO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos criar uma nova conta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwy-wp-fDO">
                                 <rect key="frame" x="24" y="44" width="366" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Primeiros passos para criar sua nova conta." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDw-y9-P5D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primeiros passos para criar sua nova conta." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDw-y9-P5D">
                                 <rect key="frame" x="24" y="134" width="366" height="14.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ah1-9D-dFx">
-                                <rect key="frame" x="24" y="228.5" width="168.5" height="62.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ah1-9D-dFx">
+                                <rect key="frame" x="24" y="228.5" width="366" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HC-HV-TZ9">
-                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Digite uma senha" borderStyle="roundedRect" placeholder="Digite o seu nome" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rgb-0b-mYL">
-                                        <rect key="frame" x="0.0" y="28.5" width="168.5" height="34"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="366" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-NI-fgn">
-                                <rect key="frame" x="0.0" y="-70.5" width="231" height="62.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-NI-fgn">
+                                <rect key="frame" x="24" y="-70.5" width="366" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repitir senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-HZ-wik">
-                                        <rect key="frame" x="0.0" y="0.0" width="231" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Informe novamente a senha" borderStyle="roundedRect" placeholder="Digite o seu nome" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="43D-A1-fIw">
-                                        <rect key="frame" x="0.0" y="28.5" width="231" height="34"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="366" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-0m-YDv" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
-                                <rect key="frame" x="107" y="536" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="IOSIGold"/>
-                                <state key="normal" title="Salvar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRO-kX-ZoK">
-                                <rect key="frame" x="107" y="456.5" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRO-kX-ZoK">
+                                <rect key="frame" x="107" y="361" width="200" height="30"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="3UR-H6-pjX"/>
+                                </constraints>
                                 <state key="normal" title="Voltar">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -551,9 +543,42 @@
                                     <action selector="buttonBackAction:" destination="99J-oZ-Jd5" eventType="touchUpInside" id="661-n3-98y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-0m-YDv">
+                                <rect key="frame" x="107" y="323" width="200" height="30"/>
+                                <color key="backgroundColor" name="IOSIGold"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="zfi-JS-ujP"/>
+                                </constraints>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DU5-BH-fIx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ah1-9D-dFx" firstAttribute="leading" secondItem="DDw-y9-P5D" secondAttribute="leading" id="4qw-ch-rtT"/>
+                            <constraint firstItem="M5d-0m-YDv" firstAttribute="top" secondItem="Rgb-0b-mYL" secondAttribute="bottom" constant="32" id="5fP-cX-u1U"/>
+                            <constraint firstItem="oRO-kX-ZoK" firstAttribute="centerX" secondItem="DU5-BH-fIx" secondAttribute="centerX" id="8ch-YQ-CdB"/>
+                            <constraint firstItem="Ah1-9D-dFx" firstAttribute="top" secondItem="Zgd-NI-fgn" secondAttribute="bottom" constant="236.5" id="Bqx-71-5zP"/>
+                            <constraint firstItem="DDw-y9-P5D" firstAttribute="leading" secondItem="Hwy-wp-fDO" secondAttribute="leading" id="Gid-If-Kwu"/>
+                            <constraint firstItem="Hwy-wp-fDO" firstAttribute="top" secondItem="DU5-BH-fIx" secondAttribute="top" id="Lug-tg-aBX"/>
+                            <constraint firstItem="Ah1-9D-dFx" firstAttribute="top" secondItem="DDw-y9-P5D" secondAttribute="bottom" constant="80" id="Ubd-7u-vQt"/>
+                            <constraint firstItem="Zgd-NI-fgn" firstAttribute="trailing" secondItem="Ah1-9D-dFx" secondAttribute="trailing" id="X0D-Zz-5qR"/>
+                            <constraint firstItem="DDw-y9-P5D" firstAttribute="trailing" secondItem="Hwy-wp-fDO" secondAttribute="trailing" id="Xc8-h6-14U"/>
+                            <constraint firstItem="M5d-0m-YDv" firstAttribute="centerX" secondItem="DU5-BH-fIx" secondAttribute="centerX" id="dDm-GW-XaY"/>
+                            <constraint firstItem="DU5-BH-fIx" firstAttribute="trailing" secondItem="Hwy-wp-fDO" secondAttribute="trailing" constant="24" id="fMW-Br-gpg"/>
+                            <constraint firstItem="DDw-y9-P5D" firstAttribute="top" secondItem="Hwy-wp-fDO" secondAttribute="bottom" constant="8" symbolic="YES" id="mSR-5S-hrs"/>
+                            <constraint firstItem="Hwy-wp-fDO" firstAttribute="leading" secondItem="DU5-BH-fIx" secondAttribute="leading" constant="24" id="wQb-qw-lLc"/>
+                            <constraint firstItem="Ah1-9D-dFx" firstAttribute="trailing" secondItem="DDw-y9-P5D" secondAttribute="trailing" id="xy2-1P-WlF"/>
+                            <constraint firstItem="Zgd-NI-fgn" firstAttribute="leading" secondItem="Ah1-9D-dFx" secondAttribute="leading" id="yBb-JU-Vg1"/>
+                            <constraint firstItem="oRO-kX-ZoK" firstAttribute="top" secondItem="M5d-0m-YDv" secondAttribute="bottom" constant="8" id="yNG-F6-Jx9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="7d7-C1-Kwt" kind="presentation" identifier="sgFinishToHome" id="UJQ-OZ-e7g"/>

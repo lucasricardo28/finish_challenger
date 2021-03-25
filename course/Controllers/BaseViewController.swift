@@ -37,10 +37,14 @@ class BaseViewController: UIViewController {
 
 extension BaseViewController: BaseProtocol{
     func showLoading() {
-        self.present(showAlert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(self.showAlert, animated: true, completion: nil)
+        }
     }
     
     func hideLoading() {
-        showAlert.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.showAlert.dismiss(animated: true, completion: nil)
+        }
     }
 }

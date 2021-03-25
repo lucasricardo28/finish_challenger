@@ -18,20 +18,36 @@ class LoginViewModel{
     func requestLogin(_ email:String, _ password:String){
         delegate?.showLoading();
         
-        let urlComponents = baseService?.mountUrlWithParams("/ricardo", nil)
-        if let url = urlComponents?.url {
-            let urlRequest = URLRequest(url: url)
-            baseService?.request(route: urlRequest, method:"POST", { ( result:Result<InitialResponse, Error>) in
-                switch(result){
-                case .success(_):
-                    self.delegate?.hideLoading()
-                    print("Deu bom")
-                case .failure(_):
-                    self.delegate?.hideLoading()
-                    print("Deu ruim")
-                }
-            })
+        guard validateEmail(email) else {
+            print("Email invalido")
+            return
         }
+        
+        guard validatePassword(password) else {
+            print("Senha invalida")
+            return
+        }
+        
+        baseService?.request(route: IosiApi.login(email, password), { ( result:Result<LoginResponse, Error>) in
+            switch(result){
+            case .success(_):
+                self.delegate?.hideLoading()
+                print("Deu bom")
+            case .failure(_):
+                self.delegate?.hideLoading()
+                print("Deu ruim")
+            }
+        })
+    }
+    
+    private func validateEmail(_ email:String) -> Bool
+    {
+        return true
+    }
+    
+    private func validatePassword(_ password:String) -> Bool
+    {
+        return password.count > 5
     }
     
 }
