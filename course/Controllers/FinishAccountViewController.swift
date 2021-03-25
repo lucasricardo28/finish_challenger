@@ -7,15 +7,22 @@
 
 import UIKit
 
-class FinishAccountViewController: UIViewController {
+class FinishAccountViewController: BaseViewController {
 
+    @IBOutlet weak var labelEmail: UILabel!
+    
+    var userEmail:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        labelEmail.text = userEmail
     }
     
-
+    @IBAction func buttonBackAction(_ sender: Any) {
+        dismissView()
+    }
+    
     /*
     // MARK: - Navigation
 

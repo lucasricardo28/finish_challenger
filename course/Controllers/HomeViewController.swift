@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  HomeViewController.swift
 //  course
 //
 //  Created by Ricardo Martins on 22/03/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,10 +15,7 @@ class LoginViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func buttonBackAction(_ sender: Any) {
-        dismissView()
-    }
-    
+
     /*
     // MARK: - Navigation
 

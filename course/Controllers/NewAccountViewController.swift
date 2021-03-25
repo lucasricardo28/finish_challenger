@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewAccountViewController: UIViewController {
+class NewAccountViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,18 @@ class NewAccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func buttonBackAction(_ sender: Any) {
+        dismissView()
+    }
+    
+    @IBAction func buttonNextStepAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(identifier: "FinishAccountView") as! FinishAccountViewController
 
+
+        self.show(secondVC, sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
