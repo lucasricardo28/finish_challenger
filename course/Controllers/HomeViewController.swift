@@ -1,13 +1,13 @@
 //
-//  NewAccountViewController.swift
+//  HomeViewController.swift
 //  course
 //
-//  Created by Ricardo Martins on 14/03/21.
+//  Created by Ricardo Martins on 22/03/21.
 //
 
 import UIKit
 
-class NewAccountViewController: BaseViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,18 +15,7 @@ class NewAccountViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func buttonBackAction(_ sender: Any) {
-        dismissView()
-    }
-    
-    @IBAction func buttonNextStepAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "FinishAccountView") as! FinishAccountViewController
 
-
-        self.show(secondVC, sender: self)
-    }
-    
     /*
     // MARK: - Navigation
 

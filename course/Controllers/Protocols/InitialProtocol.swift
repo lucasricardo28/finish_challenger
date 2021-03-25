@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 protocol InitialProtocol {
     func load()
     func close()

@@ -7,15 +7,29 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
+    @IBOutlet weak var textFieldEmail: UITextField!
+    @IBOutlet weak var textFieldPassword: UITextField!
+    
+    var loginViewModel:LoginViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loginViewModel = LoginViewModel()
+        loginViewModel?.delegate = self
+        
     }
     
-
+    @IBAction func buttonBackAction(_ sender: Any) {
+        dismissView()
+    }
+    
+    @IBAction func buttonLoginAction(_ sender: Any) {
+        loginViewModel?.requestLogin(textFieldEmail.text!, textFieldPassword.text!)
+    }
+    
     /*
     // MARK: - Navigation
 
