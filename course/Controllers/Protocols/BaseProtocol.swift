@@ -9,4 +9,5 @@ import Foundation
 protocol BaseProtocol {
     func showLoading()
     func hideLoading()
+    func showMessage(_ title:String, _ message:String)
 }

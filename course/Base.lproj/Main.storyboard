@@ -305,13 +305,13 @@
         <!--Home View Controller-->
         <scene sceneID="uKF-6K-Dap">
             <objects>
-                <viewController id="7d7-C1-Kwt" customClass="HomeViewController" customModule="course" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="7d7-C1-Kwt" customClass="HomeViewController" customModule="course" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9tE-d9-URk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo a pagina inicial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yp5-cX-08k">
-                                <rect key="frame" x="82" y="393.5" width="250" height="21"/>
+                                <rect key="frame" x="82" y="442.5" width="250" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="b1m-ie-YmO"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="qY9-3B-TYv"/>
@@ -581,7 +581,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="7d7-C1-Kwt" kind="presentation" identifier="sgFinishToHome" id="UJQ-OZ-e7g"/>
+                        <segue destination="7d7-C1-Kwt" kind="presentation" identifier="sgFinishToHome" modalPresentationStyle="fullScreen" id="UJQ-OZ-e7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oga-aW-LjV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -590,7 +590,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UJQ-OZ-e7g"/>
+        <segue reference="Ptp-uD-6Ag"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="IOSIGold">

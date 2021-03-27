@@ -86,31 +86,14 @@ class BaseService {
             
             let customDecoder = JSONDecoder.init();
             
-            if let data = data {
-                let result = try? customDecoder.decode(T.self, from: data)
+            if let dataJson = data {
+                let result = try? customDecoder.decode(T.self, from: dataJson)
                 completion(.success(result!))
+                print("Final do mapeamento")
             } else {
-                print("Error Loading Data")
+                print("Mapeamento erro")
             }
         }.resume()
     }
-    
-//    func request<T:Decodable>(route:URLRequest, _ completion: @escaping (Result<T, Error>) -> Void)
-//    {
-//        URLSession.shared.dataTask(with: route) { (data, response, error) in
-//            if let error = error {
-//                completion(.failure(error))
-//            }
-//
-//            let customDecoder = JSONDecoder.init();
-//
-//            if let data = data {
-//                let result = try? customDecoder.decode(T.self, from: data)
-//                completion(.success(result!))
-//            } else {
-//                print("Error Loading Data")
-//            }
-//        }.resume()
-//    }
     
 }

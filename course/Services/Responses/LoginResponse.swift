@@ -13,11 +13,11 @@ class LoginResponse: Decodable {
     var name:String?
     var surname:String?
     var email:String?
-    var birthdate:String?
-    var picture:String?
+    //var birthdate:String?
+    //var picture:String?
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case picture = "profilePictureURL"
+        //case picture = "profilePictureURL"
     }
 }

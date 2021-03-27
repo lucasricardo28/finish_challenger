@@ -7,7 +7,11 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController , LoginProtocol{
+    
+    func showLogin() {
+        showNextViewController()
+    }
 
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -18,8 +22,11 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
 
         loginViewModel = LoginViewModel()
-        loginViewModel?.delegate = self
+        loginViewModel?.baseProtocolDelegate = self
+        loginViewModel?.loginProtocolDelegate = self
         
+        textFieldEmail.text = "alan@iosi726.com.br"
+        textFieldPassword.text = "iosi2020"
     }
     
     @IBAction func buttonBackAction(_ sender: Any) {
@@ -30,14 +37,15 @@ class LoginViewController: BaseViewController {
         loginViewModel?.requestLogin(textFieldEmail.text!, textFieldPassword.text!)
     }
     
-    /*
-    // MARK: - Navigation
+    func showNextViewController(){
+        DispatchQueue.main.async {
+            //let ai = LoginViewController()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+            nextViewController.modalPresentationStyle = .fullScreen
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            self.present(nextViewController, animated: true, completion: nil)
+        }
     }
-    */
 
 }
