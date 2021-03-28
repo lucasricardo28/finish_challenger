@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB18A421260F98E500921F68 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A420260F98E500921F68 /* StorageService.swift */; };
+		AB18A425260F9A5800921F68 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A424260F9A5800921F68 /* UserDefaultKeys.swift */; };
+		AB18A428260F9BD800921F68 /* ValidateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A427260F9BD800921F68 /* ValidateMessage.swift */; };
+		AB18A42B260F9D0C00921F68 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A42A260F9D0C00921F68 /* ErrorMessage.swift */; };
+		AB18A42F260F9E1B00921F68 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A42E260F9E1B00921F68 /* LoginProtocol.swift */; };
+		AB18A433260FDA5100921F68 /* NewAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A432260FDA5100921F68 /* NewAccountViewModel.swift */; };
+		AB18A437260FDE3400921F68 /* NewAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A436260FDE3400921F68 /* NewAccountProtocol.swift */; };
 		AB2D02BF25FE7675003AA325 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02BE25FE7675003AA325 /* InitialViewController.swift */; };
 		AB2D02C525FE76CD003AA325 /* FinishAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */; };
 		AB2D02C825FE7713003AA325 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */; };
@@ -25,11 +32,16 @@
 		ABB5C8F225F6E3D9003EA59B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB5C8F025F6E3D9003EA59B /* LaunchScreen.storyboard */; };
 		ABC13EF7260D390300247BB5 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC13EF6260D390300247BB5 /* LoginResponse.swift */; };
 		ABC13EFA260D3F7B00247BB5 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC13EF9260D3F7B00247BB5 /* ErrorResponse.swift */; };
-		ABDAE2A826001720001C16F9 /* InitialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAE2A726001720001C16F9 /* InitialProtocol.swift */; };
-		ABDAE2AC26001D74001C16F9 /* InitialResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAE2AB26001D74001C16F9 /* InitialResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB18A420260F98E500921F68 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		AB18A424260F9A5800921F68 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		AB18A427260F9BD800921F68 /* ValidateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateMessage.swift; sourceTree = "<group>"; };
+		AB18A42A260F9D0C00921F68 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		AB18A42E260F9E1B00921F68 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		AB18A432260FDA5100921F68 /* NewAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewModel.swift; sourceTree = "<group>"; };
+		AB18A436260FDE3400921F68 /* NewAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountProtocol.swift; sourceTree = "<group>"; };
 		AB2D02BE25FE7675003AA325 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishAccountViewController.swift; sourceTree = "<group>"; };
 		AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
@@ -50,8 +62,6 @@
 		ABB5C8F325F6E3D9003EA59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABC13EF6260D390300247BB5 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		ABC13EF9260D3F7B00247BB5 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
-		ABDAE2A726001720001C16F9 /* InitialProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialProtocol.swift; sourceTree = "<group>"; };
-		ABDAE2AB26001D74001C16F9 /* InitialResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB18A423260F9A3600921F68 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AB18A424260F9A5800921F68 /* UserDefaultKeys.swift */,
+				AB18A427260F9BD800921F68 /* ValidateMessage.swift */,
+				AB18A42A260F9D0C00921F68 /* ErrorMessage.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		AB2817D225F9787A0017D2D4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				ABA6C80026096443003B7DF3 /* LoginViewModel.swift */,
+				AB18A432260FDA5100921F68 /* NewAccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -100,6 +121,7 @@
 			children = (
 				ABDAE2A426001500001C16F9 /* Responses */,
 				AB2D02D425FE77BA003AA325 /* BaseService.swift */,
+				AB18A420260F98E500921F68 /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -107,6 +129,7 @@
 		ABA6C7F226095BF2003B7DF3 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				AB18A423260F9A3600921F68 /* Enums */,
 				ABA6C7F326095C08003B7DF3 /* Views */,
 			);
 			path = Commons;
@@ -157,7 +180,6 @@
 		ABDAE2A426001500001C16F9 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				ABDAE2AB26001D74001C16F9 /* InitialResponse.swift */,
 				ABC13EF6260D390300247BB5 /* LoginResponse.swift */,
 				ABC13EF9260D3F7B00247BB5 /* ErrorResponse.swift */,
 			);
@@ -167,8 +189,9 @@
 		ABDAE2A626001583001C16F9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				ABDAE2A726001720001C16F9 /* InitialProtocol.swift */,
 				ABA6C7FD2609632E003B7DF3 /* BaseProtocol.swift */,
+				AB18A42E260F9E1B00921F68 /* LoginProtocol.swift */,
+				AB18A436260FDE3400921F68 /* NewAccountProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -243,21 +266,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABDAE2A826001720001C16F9 /* InitialProtocol.swift in Sources */,
 				ABB5C8EA25F6E3B0003EA59B /* ViewController.swift in Sources */,
 				ABB5C8E625F6E3B0003EA59B /* AppDelegate.swift in Sources */,
 				ABA6C7EF26095763003B7DF3 /* ResetPasswordViewController.swift in Sources */,
 				ABB5C8E825F6E3B0003EA59B /* SceneDelegate.swift in Sources */,
 				ABA6C7FB26096290003B7DF3 /* BaseViewController.swift in Sources */,
+				AB18A428260F9BD800921F68 /* ValidateMessage.swift in Sources */,
 				ABC13EF7260D390300247BB5 /* LoginResponse.swift in Sources */,
+				AB18A433260FDA5100921F68 /* NewAccountViewModel.swift in Sources */,
 				ABC13EFA260D3F7B00247BB5 /* ErrorResponse.swift in Sources */,
+				AB18A425260F9A5800921F68 /* UserDefaultKeys.swift in Sources */,
 				ABA6C7F826096042003B7DF3 /* HomeViewController.swift in Sources */,
 				AB2D02C825FE7713003AA325 /* NewAccountViewController.swift in Sources */,
-				ABDAE2AC26001D74001C16F9 /* InitialResponse.swift in Sources */,
+				AB18A42B260F9D0C00921F68 /* ErrorMessage.swift in Sources */,
 				ABA6C80126096443003B7DF3 /* LoginViewModel.swift in Sources */,
 				ABA6C7FE2609632E003B7DF3 /* BaseProtocol.swift in Sources */,
+				AB18A421260F98E500921F68 /* StorageService.swift in Sources */,
+				AB18A437260FDE3400921F68 /* NewAccountProtocol.swift in Sources */,
 				AB2D02BF25FE7675003AA325 /* InitialViewController.swift in Sources */,
 				AB2D02D525FE77BA003AA325 /* BaseService.swift in Sources */,
+				AB18A42F260F9E1B00921F68 /* LoginProtocol.swift in Sources */,
 				AB2D02C525FE76CD003AA325 /* FinishAccountViewController.swift in Sources */,
 				ABA6C7EC260956F6003B7DF3 /* LoginViewController.swift in Sources */,
 			);
