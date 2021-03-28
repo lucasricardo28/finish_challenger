@@ -131,7 +131,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKz-f4-81I" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
-                                <rect key="frame" x="110" y="283.33333333333331" width="170" height="30"/>
+                                <rect key="frame" x="110" y="286.66666666666669" width="170" height="30"/>
                                 <color key="backgroundColor" name="IOSIGold"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="JIg-jL-rSS"/>
@@ -152,7 +152,7 @@
                             <constraint firstItem="eN2-4P-Aws" firstAttribute="leading" secondItem="gVZ-Bu-fkh" secondAttribute="leading" id="3uW-Ia-pa1"/>
                             <constraint firstItem="eN2-4P-Aws" firstAttribute="top" secondItem="gVZ-Bu-fkh" secondAttribute="bottom" constant="80" id="CrY-4J-3Ne"/>
                             <constraint firstItem="APf-3G-Cwj" firstAttribute="leading" secondItem="t2c-Bh-3AK" secondAttribute="leading" constant="24" id="G8V-Um-cTH"/>
-                            <constraint firstItem="hKz-f4-81I" firstAttribute="top" secondItem="eN2-4P-Aws" secondAttribute="bottom" constant="28.5" id="MsZ-zy-rXz"/>
+                            <constraint firstItem="hKz-f4-81I" firstAttribute="top" secondItem="eN2-4P-Aws" secondAttribute="bottom" constant="32" id="MsZ-zy-rXz"/>
                             <constraint firstItem="APf-3G-Cwj" firstAttribute="top" secondItem="t2c-Bh-3AK" secondAttribute="top" id="QO5-03-NLi"/>
                             <constraint firstItem="gVZ-Bu-fkh" firstAttribute="trailing" secondItem="APf-3G-Cwj" secondAttribute="trailing" id="SkQ-NT-rHh"/>
                             <constraint firstItem="t2c-Bh-3AK" firstAttribute="trailing" secondItem="APf-3G-Cwj" secondAttribute="trailing" constant="24" id="iYw-cm-JWf"/>
@@ -484,6 +484,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textFieldEmail" destination="JJO-Sh-I4j" id="Iea-pp-6Ty"/>
+                        <outlet property="textFieldName" destination="oHA-Zc-3ZV" id="sSS-Fn-kmb"/>
+                        <outlet property="textFieldSurname" destination="3Ne-sD-rTy" id="yLq-yc-NNm"/>
                         <segue destination="99J-oZ-Jd5" kind="presentation" identifier="sgNewAccountToFinishAccount" modalPresentationStyle="fullScreen" id="y28-Gk-8dC"/>
                     </connections>
                 </viewController>
@@ -527,24 +530,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-NI-fgn">
-                                <rect key="frame" x="24" y="-71" width="342" height="62.333333333333336"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repitir senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-HZ-wik">
-                                        <rect key="frame" x="0.0" y="0.0" width="342" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Informe novamente a senha" borderStyle="roundedRect" placeholder="Digite o seu nome" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="43D-A1-fIw">
-                                        <rect key="frame" x="0.0" y="28.333333333333336" width="342" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRO-kX-ZoK">
-                                <rect key="frame" x="95" y="360.33333333333331" width="200" height="30"/>
+                                <rect key="frame" x="95" y="430.66666666666669" width="200" height="30"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="3UR-H6-pjX"/>
@@ -562,7 +549,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-0m-YDv">
-                                <rect key="frame" x="95" y="322.33333333333331" width="200" height="30"/>
+                                <rect key="frame" x="95" y="392.66666666666669" width="200" height="30"/>
                                 <color key="backgroundColor" name="IOSIGold"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="zfi-JS-ujP"/>
@@ -575,30 +562,51 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonSaveAction:" destination="99J-oZ-Jd5" eventType="touchUpInside" id="wJh-rA-qmB"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-NI-fgn">
+                                <rect key="frame" x="24" y="298.33333333333331" width="342" height="62.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repitir senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-HZ-wik">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Informe novamente a senha" borderStyle="roundedRect" placeholder="Digite o seu nome" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="43D-A1-fIw">
+                                        <rect key="frame" x="0.0" y="28.333333333333371" width="342" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DU5-BH-fIx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ah1-9D-dFx" firstAttribute="leading" secondItem="DDw-y9-P5D" secondAttribute="leading" id="4qw-ch-rtT"/>
-                            <constraint firstItem="M5d-0m-YDv" firstAttribute="top" secondItem="Rgb-0b-mYL" secondAttribute="bottom" constant="32" id="5fP-cX-u1U"/>
+                            <constraint firstItem="M5d-0m-YDv" firstAttribute="top" secondItem="Zgd-NI-fgn" secondAttribute="bottom" constant="32" id="5fP-cX-u1U"/>
                             <constraint firstItem="oRO-kX-ZoK" firstAttribute="centerX" secondItem="DU5-BH-fIx" secondAttribute="centerX" id="8ch-YQ-CdB"/>
-                            <constraint firstItem="Ah1-9D-dFx" firstAttribute="top" secondItem="Zgd-NI-fgn" secondAttribute="bottom" constant="236.5" id="Bqx-71-5zP"/>
                             <constraint firstItem="DDw-y9-P5D" firstAttribute="leading" secondItem="Hwy-wp-fDO" secondAttribute="leading" id="Gid-If-Kwu"/>
                             <constraint firstItem="Hwy-wp-fDO" firstAttribute="top" secondItem="DU5-BH-fIx" secondAttribute="top" id="Lug-tg-aBX"/>
                             <constraint firstItem="Ah1-9D-dFx" firstAttribute="top" secondItem="DDw-y9-P5D" secondAttribute="bottom" constant="80" id="Ubd-7u-vQt"/>
-                            <constraint firstItem="Zgd-NI-fgn" firstAttribute="trailing" secondItem="Ah1-9D-dFx" secondAttribute="trailing" id="X0D-Zz-5qR"/>
+                            <constraint firstItem="Zgd-NI-fgn" firstAttribute="top" secondItem="Ah1-9D-dFx" secondAttribute="bottom" constant="8" id="WvR-Sw-5Ty"/>
                             <constraint firstItem="DDw-y9-P5D" firstAttribute="trailing" secondItem="Hwy-wp-fDO" secondAttribute="trailing" id="Xc8-h6-14U"/>
                             <constraint firstItem="M5d-0m-YDv" firstAttribute="centerX" secondItem="DU5-BH-fIx" secondAttribute="centerX" id="dDm-GW-XaY"/>
                             <constraint firstItem="DU5-BH-fIx" firstAttribute="trailing" secondItem="Hwy-wp-fDO" secondAttribute="trailing" constant="24" id="fMW-Br-gpg"/>
                             <constraint firstItem="DDw-y9-P5D" firstAttribute="top" secondItem="Hwy-wp-fDO" secondAttribute="bottom" constant="8" symbolic="YES" id="mSR-5S-hrs"/>
+                            <constraint firstItem="Zgd-NI-fgn" firstAttribute="leading" secondItem="Ah1-9D-dFx" secondAttribute="leading" id="nfd-Qn-5Kz"/>
+                            <constraint firstItem="Zgd-NI-fgn" firstAttribute="trailing" secondItem="Ah1-9D-dFx" secondAttribute="trailing" id="vqm-xu-qRv"/>
                             <constraint firstItem="Hwy-wp-fDO" firstAttribute="leading" secondItem="DU5-BH-fIx" secondAttribute="leading" constant="24" id="wQb-qw-lLc"/>
                             <constraint firstItem="Ah1-9D-dFx" firstAttribute="trailing" secondItem="DDw-y9-P5D" secondAttribute="trailing" id="xy2-1P-WlF"/>
-                            <constraint firstItem="Zgd-NI-fgn" firstAttribute="leading" secondItem="Ah1-9D-dFx" secondAttribute="leading" id="yBb-JU-Vg1"/>
                             <constraint firstItem="oRO-kX-ZoK" firstAttribute="top" secondItem="M5d-0m-YDv" secondAttribute="bottom" constant="8" id="yNG-F6-Jx9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textFiedPassword" destination="Rgb-0b-mYL" id="gs6-6L-iZj"/>
+                        <outlet property="textFieldAConfirmPassword" destination="43D-A1-fIw" id="cMx-EB-cUy"/>
                         <segue destination="7d7-C1-Kwt" kind="presentation" identifier="sgFinishToHome" modalPresentationStyle="fullScreen" id="UJQ-OZ-e7g"/>
                     </connections>
                 </viewController>

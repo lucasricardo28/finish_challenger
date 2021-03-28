@@ -7,20 +7,47 @@
 
 import UIKit
 
-class FinishAccountViewController: BaseViewController {
-
-    @IBOutlet weak var labelEmail: UILabel!
+class FinishAccountViewController: BaseViewController , FinishAccountProtocol {
     
-    var userEmail:String = ""
+    // MARK: - PROTOCOL
+    func sendHomeView() {
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+            nextViewController.modalPresentationStyle = .fullScreen
+
+            self.present(nextViewController, animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: - VIEW MODEL
+    var finishAccountViewModel:FinishAccountViewModel?
+    
+    // MARK: - OUTLET
+    @IBOutlet weak var textFiedPassword: UITextField!
+    @IBOutlet weak var textFieldAConfirmPassword: UITextField!
+    
+    // MARK: - VARS
+    var user:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        labelEmail.text = userEmail
+        
+        finishAccountViewModel = FinishAccountViewModel()
     }
     
+    // MARK: - ACTION
     @IBAction func buttonBackAction(_ sender: Any) {
         dismissView()
+    }
+    
+    @IBAction func buttonSaveAction(_ sender: Any) {
+        guard let currentUser = user else {
+            showMessage("Error", ValidateMessage.invalidUserObject.rawValue)
+            return
+        }
+        
+        finishAccountViewModel?.createNewUser(currentUser, textFieldAConfirmPassword.text!)
     }
     
     /*

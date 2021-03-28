@@ -8,27 +8,31 @@
 import Foundation
 class LoginViewModel{
     
+    // MARK: - DELEGATE
     var baseProtocolDelegate:BaseProtocol?
     var loginProtocolDelegate:LoginProtocol?
     
+    // MARK: - SERVICE
     var baseService:BaseService?
     var storageService:StorageService?
     
+    // MARK: - INIT
     init() {
         baseService = BaseService()
         storageService = StorageService()
     }
     
+    // MARK: - FUNCTION
     func requestLogin(_ email:String, _ password:String){
         baseProtocolDelegate?.showLoading();
         
         guard validateEmail(email) else {
-            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.userInvalide.rawValue)
+            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.invalidUser.rawValue)
             return
         }
         
         guard validatePassword(password) else {
-            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.passwordInvalide.rawValue)
+            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.invalidPassword.rawValue)
             return
         }
         
@@ -37,17 +41,8 @@ class LoginViewModel{
             case .success(let loginResponse):
                 
                 self.baseProtocolDelegate?.hideLoading()
-                
-                DispatchQueue.global(qos: .background).async {
-                    
-//                    guard let userId = loginResponse.id else {
-//                        self.baseProtocolDelegate?.showMessage("Erro", ErrorMessage.IdNotFoud.rawValue)
-//                        return
-//                    }
-//                    //self.storageService?.authenticateUser(userId)
-                    print(loginResponse.email ?? "nenhum dado encontrado!")
-                    self.loginProtocolDelegate?.showLogin()
-                }
+                print(loginResponse.email ?? "nenhum dado encontrado!")
+                self.loginProtocolDelegate?.showLogin()
                 
             case .failure(_):
                 self.baseProtocolDelegate?.hideLoading()

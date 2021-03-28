@@ -13,6 +13,7 @@ class NewAccountViewModel {
     
     // MARK: - PROTOCOLS
     var baseProtocolDelegate:BaseProtocol?
+    var newAccountProtocolDelegate:NewAccountProtocol?
     
     init() {
         baseService = BaseService()
@@ -21,19 +22,22 @@ class NewAccountViewModel {
     func sendNextStep(_ name:String, _ surname:String, _ email:String) {
        
         guard validateName(name) else {
-            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.userInvalide.rawValue)
+            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.invalidUser.rawValue)
             return
         }
         
         guard validatSurname(surname) else {
-            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.userInvalide.rawValue)
+            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.invalidUser.rawValue)
             return
         }
         
         guard validateEmail(email) else{
-            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.userInvalide.rawValue)
+            baseProtocolDelegate?.showMessage("Erro", ValidateMessage.invalidUser.rawValue)
             return
         }
+        
+        newAccountProtocolDelegate?.showNextStep()
+        
     }
     
     private func validateName(_ name:String) -> Bool

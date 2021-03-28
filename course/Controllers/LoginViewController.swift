@@ -9,13 +9,16 @@ import UIKit
 
 class LoginViewController: BaseViewController , LoginProtocol{
     
+    // MARK: - PROTOCOL
     func showLogin() {
         showNextViewController()
     }
-
+    
+    // MARK: - OUTLET
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     
+    // MARK: - VIEW MODEL
     var loginViewModel:LoginViewModel?
     
     override func viewDidLoad() {
@@ -29,6 +32,7 @@ class LoginViewController: BaseViewController , LoginProtocol{
         textFieldPassword.text = "iosi2020"
     }
     
+    // MARK: - ACTION
     @IBAction func buttonBackAction(_ sender: Any) {
         dismissView()
     }
@@ -37,9 +41,9 @@ class LoginViewController: BaseViewController , LoginProtocol{
         loginViewModel?.requestLogin(textFieldEmail.text!, textFieldPassword.text!)
     }
     
+    // MARK: - FUNCTION
     func showNextViewController(){
         DispatchQueue.main.async {
-            //let ai = LoginViewController()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let nextViewController = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
             nextViewController.modalPresentationStyle = .fullScreen

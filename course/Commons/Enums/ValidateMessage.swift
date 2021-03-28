@@ -7,6 +7,9 @@
 
 import Foundation
 enum ValidateMessage:String {
-    case userInvalide = "Usuário inválido!"
-    case passwordInvalide = "Senha inválida"
+    case invalidUser = "Usuário inválido !"
+    case invalidPassword = "Senha inválida !"
+    case invalidFormatPassword = "Senha no formato inválido !"
+    case invalidConfirmPassword = "Senha e confirmar a senha devem ser iguais !"
+    case invalidUserObject = "Instãncia do usuário inváldia !"
 }

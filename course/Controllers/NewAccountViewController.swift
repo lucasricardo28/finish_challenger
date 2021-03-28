@@ -9,13 +9,24 @@ import UIKit
 
 class NewAccountViewController: BaseViewController, NewAccountProtocol {
     
+    // MARK: - VIEW MODEL
     var newAccountViewModel:NewAccountViewModel?
     
+    // MARK: - OUTLET
+    @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var textFieldSurname: UITextField!
+    @IBOutlet weak var textFieldEmail: UITextField!
+    
+    // MARK: - PROTOCOL
     func showNextStep() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "FinishAccountView") as! FinishAccountViewController
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyboard.instantiateViewController(identifier: "FinishAccountView") as! FinishAccountViewController
+            
+            nextViewController.modalPresentationStyle = .fullScreen
 
-        self.show(secondVC, sender: self)
+            self.present(nextViewController, animated: true, completion: nil)
+        }
     }
 
     override func viewDidLoad() {
@@ -23,28 +34,24 @@ class NewAccountViewController: BaseViewController, NewAccountProtocol {
 
         newAccountViewModel = NewAccountViewModel()
         newAccountViewModel?.baseProtocolDelegate = self
+        newAccountViewModel?.newAccountProtocolDelegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sgNewAccountToFinishAccount" {
+            if let finishSegue = segue.destination as? FinishAccountViewController {
+                finishSegue.user = User(id: nil, name: textFieldName.text!, surname: textFieldSurname.text!, email: textFieldEmail.text!)
+            }
+        }
+    }
+    
+    // MARK: - ACTION
     @IBAction func buttonBackAction(_ sender: Any) {
         dismissView()
     }
     
     @IBAction func buttonNextStepAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "FinishAccountView") as! FinishAccountViewController
-
-
-        self.show(secondVC, sender: self)
+        newAccountViewModel?.sendNextStep(textFieldName.text!, textFieldSurname.text!, textFieldEmail.text!)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

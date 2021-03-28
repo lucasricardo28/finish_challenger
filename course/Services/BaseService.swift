@@ -11,6 +11,7 @@ enum IosiApi {
     
     case verifyEmail(String)
     case login(String, String)
+    case createUser(String, String, String, String, String?, String?)
     
     private var baseUrl: String {
         "https://iosi.herokuapp.com"
@@ -19,9 +20,11 @@ enum IosiApi {
     private var method: String {
         switch self {
         case .verifyEmail:
-            return "GET"
+            return HttpMethod.GET.rawValue
         case .login:
-            return "POST"
+            return HttpMethod.POST.rawValue
+        case .createUser:
+            return HttpMethod.POST.rawValue
         }
     }
     
@@ -31,6 +34,8 @@ enum IosiApi {
             return [:]
         case .login(let email, let password):
             return ["email": email, "password": password]
+        case .createUser(let name, let surname, let email, let password, let birthdate, let picture):
+            return ["name": name, "surname": surname, "email": email, "password": password, "birthdate": birthdate ?? "1994-10-05", "profilePictureURL": picture ?? "https://ps.w.org/ultimate-member/assets/icon-256x256.png"]
         }
     }
     
@@ -40,6 +45,8 @@ enum IosiApi {
             return "/users/hasAccount/\(email)"
         case .login(_, _):
             return "/users/login"
+        case .createUser(_, _, _, _, _, _):
+            return "/users"
         }
     }
     
@@ -76,7 +83,7 @@ class BaseService {
         return urlComponents!
     }
     
-    func request<T:Decodable>(route: IosiApi, _ completion: @escaping (Result<T, Error>) -> Void) {
+    public func request<T:Decodable>(route: IosiApi, _ completion: @escaping (Result<T, Error>) -> Void) {
         guard let request = route.request else { return }
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
