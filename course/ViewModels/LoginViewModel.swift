@@ -36,17 +36,25 @@ class LoginViewModel{
             return
         }
         
-        baseService?.request(route: IosiApi.login(email, password), { ( result:Result<LoginResponse, Error>) in
+        baseService?.request(route: IosiApi.login(email, password), { ( result:Result<UserResponse, Error>) in
             switch(result){
             case .success(let loginResponse):
+                DispatchQueue.global(qos: .background).async {
+                    self.baseProtocolDelegate?.hideLoading()
+                    
+                    guard let identificationUser = loginResponse.id else {
+                        self.baseProtocolDelegate?.showMessage("Error", ErrorMessage.IdNotFoud.rawValue)
+                        return
+                    }
+                    
+                    self.storageService?.authenticateUser(identificationUser)
+                    
+                    self.loginProtocolDelegate?.showLogin()
+                }
                 
+            case .failure(let error):
                 self.baseProtocolDelegate?.hideLoading()
-                print(loginResponse.email ?? "nenhum dado encontrado!")
-                self.loginProtocolDelegate?.showLogin()
-                
-            case .failure(_):
-                self.baseProtocolDelegate?.hideLoading()
-                self.baseProtocolDelegate?.showMessage("Erro", "Um erro genérico")
+                self.baseProtocolDelegate?.showMessage("Erro", error.localizedDescription)
             }
         })
     }

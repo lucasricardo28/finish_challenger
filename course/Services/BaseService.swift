@@ -58,7 +58,15 @@ enum IosiApi {
         
         var request = URLRequest(url: url)
         request.httpMethod = self.method
-        request.httpBody = try? JSONEncoder().encode(self.body)
+        
+        if let jsonData = try? JSONSerialization.data(withJSONObject: self.body) {
+            request.httpBody = jsonData
+        }
+        
+        //HTTP Headers
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
         return request
     }
 }
@@ -94,9 +102,13 @@ class BaseService {
             let customDecoder = JSONDecoder.init();
             
             if let dataJson = data {
-                let result = try? customDecoder.decode(T.self, from: dataJson)
-                completion(.success(result!))
-                print("Final do mapeamento")
+                
+                do {
+                    let result = try customDecoder.decode(T.self, from: dataJson)
+                    completion(.success(result))
+                } catch {
+                    completion(.failure(error))
+                }
             } else {
                 print("Mapeamento erro")
             }

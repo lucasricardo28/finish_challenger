@@ -9,7 +9,7 @@ import Foundation
 class UserResponse: Decodable {
     
     var isProfessor:Bool?
-    var id:Int?
+    var id:String?
     var name:String?
     var surname:String?
     var email:String?
@@ -19,5 +19,7 @@ class UserResponse: Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case picture = "profilePictureURL"
+        case isProfessor, name, surname, email, birthdate
+        
     }
 }

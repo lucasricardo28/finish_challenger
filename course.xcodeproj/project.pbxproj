@@ -14,6 +14,7 @@
 		AB18A42F260F9E1B00921F68 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A42E260F9E1B00921F68 /* LoginProtocol.swift */; };
 		AB18A433260FDA5100921F68 /* NewAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A432260FDA5100921F68 /* NewAccountViewModel.swift */; };
 		AB18A437260FDE3400921F68 /* NewAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18A436260FDE3400921F68 /* NewAccountProtocol.swift */; };
+		AB2B61E226128DF800C5ABE6 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2B61E126128DF800C5ABE6 /* LoginRequest.swift */; };
 		AB2D02BF25FE7675003AA325 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02BE25FE7675003AA325 /* InitialViewController.swift */; };
 		AB2D02C525FE76CD003AA325 /* FinishAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */; };
 		AB2D02C825FE7713003AA325 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */; };
@@ -48,6 +49,7 @@
 		AB18A42E260F9E1B00921F68 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		AB18A432260FDA5100921F68 /* NewAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewModel.swift; sourceTree = "<group>"; };
 		AB18A436260FDE3400921F68 /* NewAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountProtocol.swift; sourceTree = "<group>"; };
+		AB2B61E126128DF800C5ABE6 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		AB2D02BE25FE7675003AA325 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishAccountViewController.swift; sourceTree = "<group>"; };
 		AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				ABDAE2A426001500001C16F9 /* Responses */,
 				AB2D02D425FE77BA003AA325 /* BaseService.swift */,
 				AB18A420260F98E500921F68 /* StorageService.swift */,
+				AB2B61E126128DF800C5ABE6 /* LoginRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				AB18A437260FDE3400921F68 /* NewAccountProtocol.swift in Sources */,
 				AB2D02BF25FE7675003AA325 /* InitialViewController.swift in Sources */,
 				AB2D02D525FE77BA003AA325 /* BaseService.swift in Sources */,
+				AB2B61E226128DF800C5ABE6 /* LoginRequest.swift in Sources */,
 				AB18A42F260F9E1B00921F68 /* LoginProtocol.swift in Sources */,
 				AB2D02C525FE76CD003AA325 /* FinishAccountViewController.swift in Sources */,
 				ABA6C7EC260956F6003B7DF3 /* LoginViewController.swift in Sources */,

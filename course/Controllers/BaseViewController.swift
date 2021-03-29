@@ -34,6 +34,9 @@ class BaseViewController: UIViewController {
         
         newView.color = .red
         newView.layer.cornerRadius = 10
+        
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        showMessageAlert.addAction(ok)
     }
     
 

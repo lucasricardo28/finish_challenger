@@ -13,7 +13,7 @@ class StorageService{
         return false
     }
     
-    func authenticateUser(_ identification:Int) {
+    func authenticateUser(_ identification:String) {
         conf.set(identification, forKey: UserDefaultKeys.identification.rawValue)
     }
     
