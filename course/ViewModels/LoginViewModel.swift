@@ -42,12 +42,17 @@ class LoginViewModel{
                 DispatchQueue.global(qos: .background).async {
                     self.baseProtocolDelegate?.hideLoading()
                     
-                    guard let identificationUser = loginResponse.id else {
-                        self.baseProtocolDelegate?.showMessage("Error", ErrorMessage.IdNotFoud.rawValue)
+                    if loginResponse.id == nil {
+                        self.baseProtocolDelegate?.showMessage("Error", ErrorMessage.idNotFoud.rawValue)
                         return
                     }
                     
-                    self.storageService?.authenticateUser(identificationUser)
+                    if loginResponse.email == nil{
+                        self.baseProtocolDelegate?.showMessage("Error", ErrorMessage.emailNotFound.rawValue)
+                        return
+                    }
+                    
+                    self.storageService?.authenticateUser(loginResponse)
                     
                     self.loginProtocolDelegate?.showLogin()
                 }

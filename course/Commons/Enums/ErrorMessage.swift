@@ -7,5 +7,6 @@
 
 import Foundation
 enum ErrorMessage:String {
-    case IdNotFoud = "Identificador do usuário não encontrado!"
+    case idNotFoud = "Identificador do usuário não encontrado!"
+    case emailNotFound = "Email do usuário não encontrado!"
 }

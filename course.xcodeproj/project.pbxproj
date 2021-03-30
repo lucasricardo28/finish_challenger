@@ -19,6 +19,7 @@
 		AB2D02C525FE76CD003AA325 /* FinishAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */; };
 		AB2D02C825FE7713003AA325 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */; };
 		AB2D02D525FE77BA003AA325 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D02D425FE77BA003AA325 /* BaseService.swift */; };
+		AB37D98C26129E8700C33F79 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB37D98B26129E8700C33F79 /* HomeViewModel.swift */; };
 		AB5732402610C701009BFD2E /* FinishAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB57323F2610C701009BFD2E /* FinishAccountViewModel.swift */; };
 		AB5732432610C734009BFD2E /* FinishAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5732422610C734009BFD2E /* FinishAccountProtocol.swift */; };
 		AB5732462610C8BA009BFD2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5732452610C8BA009BFD2E /* User.swift */; };
@@ -54,6 +55,7 @@
 		AB2D02C425FE76CD003AA325 /* FinishAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishAccountViewController.swift; sourceTree = "<group>"; };
 		AB2D02C725FE7713003AA325 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		AB2D02D425FE77BA003AA325 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		AB37D98B26129E8700C33F79 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AB57323F2610C701009BFD2E /* FinishAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishAccountViewModel.swift; sourceTree = "<group>"; };
 		AB5732422610C734009BFD2E /* FinishAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishAccountProtocol.swift; sourceTree = "<group>"; };
 		AB5732452610C8BA009BFD2E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				ABA6C80026096443003B7DF3 /* LoginViewModel.swift */,
 				AB18A432260FDA5100921F68 /* NewAccountViewModel.swift */,
 				AB57323F2610C701009BFD2E /* FinishAccountViewModel.swift */,
+				AB37D98B26129E8700C33F79 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				ABC13EF7260D390300247BB5 /* LoginResponse.swift in Sources */,
 				AB18A433260FDA5100921F68 /* NewAccountViewModel.swift in Sources */,
 				ABC13EFA260D3F7B00247BB5 /* ErrorResponse.swift in Sources */,
+				AB37D98C26129E8700C33F79 /* HomeViewModel.swift in Sources */,
 				AB57324C2610FB00009BFD2E /* FinishAccountResponse.swift in Sources */,
 				AB18A425260F9A5800921F68 /* UserDefaultKeys.swift in Sources */,
 				AB57325426110008009BFD2E /* UserResponse.swift in Sources */,

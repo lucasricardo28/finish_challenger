@@ -9,10 +9,22 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var homeViewModel:HomeViewModel?
+    
+    @IBOutlet weak var labelEmail: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        homeViewModel = HomeViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let optionalEmail = homeViewModel?.loadingEmail()
+        
+        if let email = optionalEmail {
+            labelEmail.text = email
+        }
     }
     
 
