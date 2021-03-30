@@ -39,13 +39,29 @@ class FinishAccountViewModel{
             return
         }
         
-        baseService?.request(route: IosiApi.createUser(user.name, user.surname, user.email, password, nil, nil), { ( result:Result<FinishAccountResponse, Error>) in
+        baseProtocolDelegate?.showLoading()
+        
+        baseService?.request(route: IosiApi.createUser(user.name, user.surname, user.email, password, nil, nil), { ( result:Result<UserResponse, Error>) in
             switch(result){
             case .success(let finishAccountResponse):
                 
-                self.baseProtocolDelegate?.hideLoading()
-                print(finishAccountResponse.email ?? "nenhum dado encontrado!")
-                self.finishProtocolDelegate?.sendHomeView()
+                DispatchQueue.global(qos: .background).async {
+                    self.baseProtocolDelegate?.hideLoading()
+                    
+                    if finishAccountResponse.id == nil {
+                        self.baseProtocolDelegate?.showMessage("Error", ErrorMessage.idNotFoud.rawValue)
+                        return
+                    }
+                    
+                    if finishAccountResponse.email == nil{
+                        self.baseProtocolDelegate?.showMessage("Error", ErrorMessage.emailNotFound.rawValue)
+                        return
+                    }
+                    
+                    self.storageService?.authenticateUser(finishAccountResponse)
+                    
+                    self.finishProtocolDelegate?.sendHomeView()
+                }
                 
             case .failure(_):
                 self.baseProtocolDelegate?.hideLoading()

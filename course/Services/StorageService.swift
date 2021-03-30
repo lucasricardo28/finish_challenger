@@ -30,6 +30,10 @@ class StorageService{
         return conf.string(forKey: UserDefaultKeys.email.rawValue)
     }
     
+    func getAuthenticateUserId() -> String? {
+        return conf.string(forKey: UserDefaultKeys.identification.rawValue)
+    }
+    
     func logoutUser() {
         conf.removeObject(forKey: UserDefaultKeys.identification.rawValue)
     }

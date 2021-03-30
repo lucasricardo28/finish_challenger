@@ -34,6 +34,8 @@ class FinishAccountViewController: BaseViewController , FinishAccountProtocol {
         super.viewDidLoad()
         
         finishAccountViewModel = FinishAccountViewModel()
+        finishAccountViewModel?.baseProtocolDelegate = self
+        finishAccountViewModel?.finishProtocolDelegate = self
     }
     
     // MARK: - ACTION
@@ -42,10 +44,13 @@ class FinishAccountViewController: BaseViewController , FinishAccountProtocol {
     }
     
     @IBAction func buttonSaveAction(_ sender: Any) {
-        guard let currentUser = user else {
+        
+        guard var currentUser = user else {
             showMessage("Error", ValidateMessage.invalidUserObject.rawValue)
             return
         }
+        
+        currentUser.password = textFiedPassword.text!
         
         finishAccountViewModel?.createNewUser(currentUser, textFieldAConfirmPassword.text!)
     }

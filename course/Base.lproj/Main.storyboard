@@ -91,82 +91,6 @@
             </objects>
             <point key="canvasLocation" x="133" y="106"/>
         </scene>
-        <!--Reset Password View Controller-->
-        <scene sceneID="95N-zd-Wt9">
-            <objects>
-                <viewController id="yEn-w2-KmF" customClass="ResetPasswordViewController" customModule="course" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZM9-oX-DRL">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informe o email e siga as intruções." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APf-3G-Cwj">
-                                <rect key="frame" x="24" y="0.0" width="342" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="vVH-Wn-KXN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O email vai receber uma senha de acesso." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVZ-Bu-fkh">
-                                <rect key="frame" x="24" y="98" width="342" height="14.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eN2-4P-Aws">
-                                <rect key="frame" x="24" y="192.33333333333334" width="342" height="62.333333333333343"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDX-Lo-ltt">
-                                        <rect key="frame" x="0.0" y="0.0" width="342" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qbg-DI-UG8">
-                                        <rect key="frame" x="0.0" y="28.333333333333314" width="342" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKz-f4-81I" customClass="PrimaryButton" customModule="course" customModuleProvider="target">
-                                <rect key="frame" x="110" y="286.66666666666669" width="170" height="30"/>
-                                <color key="backgroundColor" name="IOSIGold"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="JIg-jL-rSS"/>
-                                </constraints>
-                                <state key="normal" title="Resetar senha">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="t2c-Bh-3AK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eN2-4P-Aws" firstAttribute="leading" secondItem="gVZ-Bu-fkh" secondAttribute="leading" id="3uW-Ia-pa1"/>
-                            <constraint firstItem="eN2-4P-Aws" firstAttribute="top" secondItem="gVZ-Bu-fkh" secondAttribute="bottom" constant="80" id="CrY-4J-3Ne"/>
-                            <constraint firstItem="APf-3G-Cwj" firstAttribute="leading" secondItem="t2c-Bh-3AK" secondAttribute="leading" constant="24" id="G8V-Um-cTH"/>
-                            <constraint firstItem="hKz-f4-81I" firstAttribute="top" secondItem="eN2-4P-Aws" secondAttribute="bottom" constant="32" id="MsZ-zy-rXz"/>
-                            <constraint firstItem="APf-3G-Cwj" firstAttribute="top" secondItem="t2c-Bh-3AK" secondAttribute="top" id="QO5-03-NLi"/>
-                            <constraint firstItem="gVZ-Bu-fkh" firstAttribute="trailing" secondItem="APf-3G-Cwj" secondAttribute="trailing" id="SkQ-NT-rHh"/>
-                            <constraint firstItem="t2c-Bh-3AK" firstAttribute="trailing" secondItem="APf-3G-Cwj" secondAttribute="trailing" constant="24" id="iYw-cm-JWf"/>
-                            <constraint firstItem="gVZ-Bu-fkh" firstAttribute="leading" secondItem="APf-3G-Cwj" secondAttribute="leading" id="lsM-in-KQ1"/>
-                            <constraint firstItem="hKz-f4-81I" firstAttribute="centerX" secondItem="t2c-Bh-3AK" secondAttribute="centerX" id="yuV-KU-akb"/>
-                            <constraint firstItem="gVZ-Bu-fkh" firstAttribute="top" secondItem="APf-3G-Cwj" secondAttribute="bottom" constant="8" id="zMQ-7T-UB5"/>
-                            <constraint firstItem="eN2-4P-Aws" firstAttribute="trailing" secondItem="gVZ-Bu-fkh" secondAttribute="trailing" id="zfF-K1-y0m"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mob-OF-D6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1480" y="1564"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="edM-W1-EyO">
             <objects>
@@ -245,9 +169,6 @@
                                 <state key="normal" title="Esqueci a senha">
                                     <color key="titleColor" systemColor="systemGray2Color"/>
                                 </state>
-                                <connections>
-                                    <segue destination="yEn-w2-KmF" kind="presentation" identifier="sgHomeToForgotPassword" id="b5H-Xl-AJf"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhm-Vh-vG3">
                                 <rect key="frame" x="95" y="483" width="200" height="30"/>
@@ -352,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFl-LO-zZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-623" y="2292"/>
+            <point key="canvasLocation" x="-612" y="2284"/>
         </scene>
         <!--New Account View Controller-->
         <scene sceneID="JIi-Xl-igL">
@@ -619,7 +540,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ptp-uD-6Ag"/>
+        <segue reference="UJQ-OZ-e7g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="IOSIGold">

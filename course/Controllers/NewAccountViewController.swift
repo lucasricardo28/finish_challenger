@@ -20,12 +20,7 @@ class NewAccountViewController: BaseViewController, NewAccountProtocol {
     // MARK: - PROTOCOL
     func showNextStep() {
         DispatchQueue.main.async {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextViewController = storyboard.instantiateViewController(identifier: "FinishAccountView") as! FinishAccountViewController
-            
-            nextViewController.modalPresentationStyle = .fullScreen
-
-            self.present(nextViewController, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "sgNewAccountToFinishAccount", sender: self)
         }
     }
 
